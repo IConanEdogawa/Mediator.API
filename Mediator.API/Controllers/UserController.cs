@@ -27,6 +27,7 @@ namespace Mediator.API.Controllers
             return Ok("Created !");
         }
 
+
         [HttpGet]
         public async Task<ActionResult> GetUsers()
         {
@@ -36,7 +37,7 @@ namespace Mediator.API.Controllers
         }
 
 
-        [HttpGet]
+        [HttpPost]
         public async Task<ActionResult<User>> GetUserById(GetUserByIdQueryCommand command)
         {
             var result = await _mediator.Send(command);

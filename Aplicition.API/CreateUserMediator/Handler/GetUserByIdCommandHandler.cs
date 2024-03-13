@@ -13,19 +13,18 @@ namespace Mediator.Applicition.CreateUserMediator.Handler
 {
     public class GetUserByIdCommandHandler : IRequestHandler<GetUserByIdQueryCommand, User>
     {
-        private readonly IApplicitionDbContext _applicitionDbContext;
+        private readonly IApplicitionDbContext _dbContext;
 
-        public GetUserByIdCommandHandler(IApplicitionDbContext applicitionDbContext)
+        public GetUserByIdCommandHandler(IApplicitionDbContext dbContext)
         {
-            _applicitionDbContext = applicitionDbContext;
+            _dbContext = dbContext;
         }
 
         public async Task<User> Handle(GetUserByIdQueryCommand request, CancellationToken cancellationToken)
         {
-            var result = await _applicitionDbContext.Users.FirstOrDefaultAsync(x => x.Id == request.Id && x.isDeleted != true);
+            var user = await _dbContext.Users.FirstOrDefaultAsync(x => x.Id == request.Id && x.isDeleted != true);
 
-            return result;
-
+            return user;
         }
     }
 }
