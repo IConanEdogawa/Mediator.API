@@ -10,7 +10,7 @@ namespace Mediator.Applicition.Abstractions.Mappers
         {
 
             CreateMap<User, CreateUserCommand>().ReverseMap();
-
+            CreateMap<User, UpdateUserCommand>().ReverseMap();
         }
     }
 }

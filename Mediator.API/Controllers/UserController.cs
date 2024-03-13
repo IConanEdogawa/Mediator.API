@@ -53,5 +53,13 @@ namespace Mediator.API.Controllers
 
             return Ok("Deleted !");
         }
+
+        [HttpPut]
+        public async Task<ActionResult> UpdateUser([FromForm]UpdateUserCommand command)
+        {
+            var result = await _mediator.Send(command);
+
+            return Ok(result);
+        }
     }
 }
