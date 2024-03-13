@@ -10,7 +10,7 @@ namespace Mediator.Domain.Entities
     {
         public Guid Id { get; set; } = Guid.NewGuid();
         public string Name { get; set; }
-        public string IserName { get; set; }
+        public string UserName { get; set; }
         public string Bio { get; set; }
         public string email { get; set; }
         public string photo_path { get; set; }

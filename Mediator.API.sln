@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediator.API", "Mediator.API\Mediator.API.csproj", "{D20FB528-91DC-4046-A815-CC36C49D4C2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mediator.API", "Mediator.API\Mediator.API.csproj", "{D20FB528-91DC-4046-A815-CC36C49D4C2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediator.Applicition", "Aplicition.API\Mediator.Applicition.csproj", "{1372F550-3184-49B1-AC04-E66753B3E9BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mediator.Applicition", "Aplicition.API\Mediator.Applicition.csproj", "{1372F550-3184-49B1-AC04-E66753B3E9BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediator.Domain", "Mediator.Domain\Mediator.Domain.csproj", "{8E19FCA9-4C0C-40A1-86AE-F53D13F468DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mediator.Domain", "Mediator.Domain\Mediator.Domain.csproj", "{8E19FCA9-4C0C-40A1-86AE-F53D13F468DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediator.Infrastructure", "Mediator.Infrastructure\Mediator.Infrastructure.csproj", "{17EC2D37-26C3-41A9-8510-D164FE0A563B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mediator.Infrastructure", "Mediator.Infrastructure\Mediator.Infrastructure.csproj", "{17EC2D37-26C3-41A9-8510-D164FE0A563B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatrUnitTests", "MediatrUnitTests\MediatrUnitTests.csproj", "{8FB3CD28-5290-4E5E-88D1-5A7203551AF7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{17EC2D37-26C3-41A9-8510-D164FE0A563B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17EC2D37-26C3-41A9-8510-D164FE0A563B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17EC2D37-26C3-41A9-8510-D164FE0A563B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FB3CD28-5290-4E5E-88D1-5A7203551AF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FB3CD28-5290-4E5E-88D1-5A7203551AF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FB3CD28-5290-4E5E-88D1-5A7203551AF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FB3CD28-5290-4E5E-88D1-5A7203551AF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

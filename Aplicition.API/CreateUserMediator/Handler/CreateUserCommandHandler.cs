@@ -15,6 +15,8 @@ namespace Mediator.Applicition.CreateUserMediator.Handler
     {
         private readonly IApplicitionDbContext _applicitionDbContext;
         private readonly IMapper _mapper;
+        private IMapper object1;
+        private IApplicitionDbContext object2;
 
         public CreateUserCommandHandler(IApplicitionDbContext applicitionDbContext, IMapper mapper)
         {
@@ -22,7 +24,11 @@ namespace Mediator.Applicition.CreateUserMediator.Handler
             _mapper = mapper;
         }
 
-
+        public CreateUserCommandHandler(IMapper object1, IApplicitionDbContext object2)
+        {
+            this.object1 = object1;
+            this.object2 = object2;
+        }
 
         protected override async Task Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
