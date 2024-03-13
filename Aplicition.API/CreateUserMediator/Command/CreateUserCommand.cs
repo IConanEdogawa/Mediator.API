@@ -1,13 +1,15 @@
-﻿using System;
+﻿using MediatR;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mediator.Domain.DTOs
+namespace Mediator.Applicition.CreateUserMediator.Command
 {
-    public class CreateUserMediator
+    public class CreateUserCommand : IRequest
     {
+
         public string Name { get; set; }
         public string IserName { get; set; }
         public string Bio { get; set; }
@@ -16,5 +18,6 @@ namespace Mediator.Domain.DTOs
         public int followers_count { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
+
     }
 }

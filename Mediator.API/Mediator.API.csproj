@@ -7,11 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\Aplicition.API\Mediator.Applicition.csproj" />
+    <ProjectReference Include="..\Mediator.Domain\Mediator.Domain.csproj" />
+    <ProjectReference Include="..\Mediator.Infrastructure\Mediator.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

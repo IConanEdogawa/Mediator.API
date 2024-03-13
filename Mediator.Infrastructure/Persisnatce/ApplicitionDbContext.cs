@@ -1,4 +1,5 @@
-﻿using Mediator.Domain.Entities;
+﻿using Mediator.Applicition.Abstractions;
+using Mediator.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Mediator.Infrastructure.Persisnatce
 {
-    public class MyDbContext : DbContext
+    public class ApplicitionDbContext : DbContext, IApplicitionDbContext
     {
-        public MyDbContext(DbContextOptions<MyDbContext> options)
+        public ApplicitionDbContext(DbContextOptions<ApplicitionDbContext> options)
             : base(options)
         {
 
