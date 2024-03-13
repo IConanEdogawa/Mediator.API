@@ -1,5 +1,6 @@
 ﻿using Mediator.Applicition.CreateUserMediator.Command;
 using Mediator.Applicition.CreateUserMediator.Query;
+using Mediator.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -30,6 +31,15 @@ namespace Mediator.API.Controllers
         public async Task<IActionResult> GetUsers()
         {
             var result = await _mediator.Send(new GetAllUsersCommandQuery());
+
+            return Ok(result);
+        }
+
+
+        [HttpGet]
+        public async Task<ActionResult<User>> GetUserById(GetUserByIdQueryCommand command)
+        {
+            var result = await _mediator.Send(command);
 
             return Ok(result);
         }
