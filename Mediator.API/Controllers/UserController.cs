@@ -28,7 +28,7 @@ namespace Mediator.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetUsers()
+        public async Task<ActionResult> GetUsers()
         {
             var result = await _mediator.Send(new GetAllUsersCommandQuery());
 
