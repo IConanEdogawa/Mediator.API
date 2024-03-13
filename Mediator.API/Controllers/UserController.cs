@@ -19,11 +19,11 @@ namespace Mediator.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateUser(CreateUserCommand command)
+        public async Task<IActionResult> CreateUser([FromForm]CreateUserCommand command)
         {
 
             await _mediator.Send(command);
-
+            
             return Ok("Created !");
         }
 
@@ -38,12 +38,20 @@ namespace Mediator.API.Controllers
 
 
         [HttpPost]
-        public async Task<ActionResult<User>> GetUserById(GetUserByIdQueryCommand command)
+        public async Task<ActionResult<User>> GetUserById([FromForm]GetUserByIdQueryCommand command)
         {
             var result = await _mediator.Send(command);
 
             return Ok(result);
         }
 
+
+        [HttpDelete]
+        public async Task<ActionResult> DeleteUser([FromForm]DeleteUserCommand command)
+        {
+            var result = await _mediator.Send(command);
+
+            return Ok("Deleted !");
+        }
     }
 }
